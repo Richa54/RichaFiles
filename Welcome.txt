@@ -1,2 +1,5 @@
 Hi,
 My name is Richa Sharma
+
+Skills
+java
