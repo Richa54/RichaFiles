@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd">  
+               
+               
+    <bean class="MapConstructor.User" name="user1">
+    <constructor-arg value="u1"/>
+    <constructor-arg value="richa123@gmail.com"/>
+    </bean>
+    
+    <bean class="MapConstructor.User" name="user2">
+    <constructor-arg value="u2"/>
+    <constructor-arg value="Sharma123@gmail.com"/>
+    </bean>
+     <bean class="MapConstructor.Answer" name="answer1">
+    <constructor-arg value="a1"/>
+    <constructor-arg value="Java"/>
+    </bean>
+    
+    <bean class="MapConstructor.Answer" name="answer2">
+    <constructor-arg value="a2"/>
+    <constructor-arg value="Python"/>
+    </bean>
+    <bean class="MapConstructor.Question" name="question">
+    <constructor-arg value="1"/>
+    <constructor-arg value="James"/>
+    <constructor-arg><map>
+    <entry key-ref="answer1" value-ref="user1"></entry>  
+     <entry key-ref="answer2" value-ref="user2"></entry>  
+    </map></constructor-arg>
+    
+    </bean>
+     </beans>
